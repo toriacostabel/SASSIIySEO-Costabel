@@ -4,12 +4,13 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
+        .servicio{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
     }
-    .servicio{
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-    }
+   
     .quienSoyCont{
         display: flex;
         flex-direction: column-reverse;
