@@ -8,23 +8,26 @@
     display: flex;
     justify-content: space-evenly;
     margin: 5px;
-    background-color: #FFCDD4;
+    background-color: $rosaClaro;
     align-items: center;
+    .quienSoyTxt{
+        border-radius: 10px;
+        width: 50%;
+        background-color: white;
+        text-align: center;
+        padding: 2%;
+    }
+    .fotoPersonalCont{
+        padding: 10px;
+        width: 35%;
+        .fotoPersonal{
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
-.quienSoyTxt{
-    border-radius: 10px;
-    width: 50%;
-    background-color: white;
-    text-align: center;
-    padding: 2%;
-}
-.fotoPersonalCont{
-    padding: 10px;
-    width: 35%;
-}
-.fotoPersonal{
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-}
+
+
+
