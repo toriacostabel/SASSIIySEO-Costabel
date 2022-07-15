@@ -15,4 +15,69 @@ $sombraGris: rgba(142,112,112,0.75);
 @import "ubicacion";
 @import "contacto";
 @import "footer";
-@import "mediaQueries";
+
+@media(max-width:960px){
+    .serviciosContainer{
+        border: 10px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        .servicio{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto auto;
+            grid-template-areas:"srvcTitle   srvcTitle"
+                                "srvcImgCont srvcImgCont"
+                                "srvcTxt     srvcTxt";
+            .srvcTitle{
+                grid-area: srvcTitle;
+                padding: 10px 0px 0px 0px;
+                text-align: center;
+                h3{
+                    font-size: 34px;
+                    margin: 0;
+                }
+            }
+            .srvcImgCont{
+                grid-area: srvcImgCont;
+                border-radius: 8px;
+                padding: 10px;
+                .servicioImg{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    padding: 10px;
+                }
+            }
+            .srvcTxt{
+                grid-area: srvcTxt;
+                padding: 8px 12px;
+                line-height: 22px;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+    .quienSoyCont{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        .quienSoyTxt{
+            width: 90%;
+            margin: 5%;
+            margin-top: 10px;
+        }
+        .fotoPersonalCont{
+            width: 90%;
+            margin: 5%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width:580px){
+    .servicio{
+        flex-direction: column;
+    }
+}
