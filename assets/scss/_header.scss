@@ -1,12 +1,17 @@
 /*----------------header-------------------*/
+
+/*-------MIXIN-------*/
+@mixin headerH($txtAlign, $padding) {
+    text-align: $txtAlign;
+    padding: $padding;
+}
+
 .header{
     background-color: $rosaFuerte;
     .headerH1{
-        text-align: center;
-        padding: 20px 0px 2px 0px;
+        @include headerH(center,20px 0px 2px 0px)
     }
     .headerH2{
-        text-align: center;
-        padding: 4px 0px 12px 0px;
+        @include headerH(center,4px 0px 12px 0px)
     }
 }
