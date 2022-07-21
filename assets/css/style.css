@@ -16,9 +16,11 @@
 }
 .header .headerH1 {
   text-align: center;
+  padding: 20px 0px 2px 0px;
 }
 .header .headerH2 {
   text-align: center;
+  padding: 4px 0px 12px 0px;
 }
 
 /*----------------promociones----------------*/
@@ -40,6 +42,9 @@
 .promocion .promoH2 {
   text-align: center;
 }
+.promocion .promoImg .imgPromo {
+  border-radius: 8px;
+}
 .promocion .promoTxt {
   text-align: center;
 }
@@ -47,13 +52,10 @@
   padding: 0;
   margin: 3px;
 }
-.promocion .promoImg .imgPromo {
-  border-radius: 8px;
-}
 .promocion .comprar {
   background-color: rgb(238, 98, 138);
-  width: 40%;
-  height: 30px;
+  width: 45%;
+  height: 36px;
   border-radius: 8px;
   border: 0;
   color: white;
@@ -61,12 +63,6 @@
 }
 
 /*---------------servicios main-------------------*/
-.serviciosTitulo {
-  font-size: 50px;
-  text-align: center;
-  margin: 16px 0px 0px 0px;
-}
-
 .serviciosContainer {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +71,15 @@
   width: 96%;
   margin: 2%;
 }
-.serviciosContainer .servicio {
+
+.serviciosTitulo {
+  font-size: 50px;
+  text-align: center;
+  margin: 16px 0px 0px 0px;
+}
+
+/*-------------------servicio---------------*/
+.servicio {
   width: 48%;
   margin: 10px 0;
   background-color: #FFCDD4;
@@ -86,40 +90,48 @@
   grid-template-rows: auto auto;
   grid-template-areas: "srvcTitle srvcTitle srvcTitle srvcTitle" "srvcImgCont srvcImgCont srvcTxt srvcTxt";
 }
-.serviciosContainer .servicio:hover {
+
+.servicio:hover {
   box-shadow: 0px 5px 16px 3px rgba(142, 112, 112, 0.75);
   -webkit-box-shadow: 0px 5px 16px 3px rgba(142, 112, 112, 0.75);
   -moz-box-shadow: 0px 5px 16px 3px rgba(142, 112, 112, 0.75);
   transform: translateY(-10px);
 }
-.serviciosContainer .servicio .srvcTitle {
+
+.srvcTitle {
   grid-area: srvcTitle;
   padding: 10px 0px 0px 0px;
   text-align: center;
 }
-.serviciosContainer .servicio .srvcTitle h3 {
-  font-size: 36px;
+
+.srvcTitle h3 {
+  font-size: 38px;
+  padding: 8px 3px 2px 3px;
   margin: 0;
 }
-.serviciosContainer .servicio .srvcImgCont {
+
+.srvcImgCont {
   grid-area: srvcImgCont;
-  border-radius: 8px;
   padding: 10px;
 }
-.serviciosContainer .servicio .srvcImgCont .servicioImg {
+
+.servicioImg {
   width: 100%;
   height: 100%;
   border-radius: 8px;
   padding: 10px;
 }
-.serviciosContainer .servicio .srvcTxt {
+
+.srvcTxt {
   grid-area: srvcTxt;
-  padding: 8px 12px;
+  padding: 8px 12px 8px 12px;
   line-height: 22px;
   text-align: center;
   justify-content: center;
+  font-size: 20px;
 }
 
+/*---este archivo no tiene nesting porque no he logrado hacer que funcione correctamente y se rompe---*/
 /*--------------------quien soy-----------------*/
 .quienSoyTitulo {
   text-align: center;
@@ -134,23 +146,26 @@
   background-color: #FFCDD4;
   align-items: center;
 }
-.quienSoyCont .quienSoyTxt {
+
+.quienSoyTxt {
   border-radius: 10px;
   width: 50%;
   background-color: white;
   text-align: center;
   padding: 2%;
 }
-.quienSoyCont .fotoPersonalCont {
+
+.fotoPersonalCont {
   padding: 10px;
   width: 35%;
 }
-.quienSoyCont .fotoPersonalCont .fotoPersonal {
+.fotoPersonalCont .fotoPersonal {
   border-radius: 5px;
   width: 100%;
   height: 100%;
 }
 
+/*---este archivo no tiene nesting completo porque no he logrado hacer que funcione correctamente y se rompe---*/
 /*--------------------ubicacion-----------------*/
 .ubicacionMain {
   width: 100%;
@@ -158,6 +173,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*-------------mapa-------------*/
 }
 .ubicacionMain .ubicacionTitulo {
   font-size: 50px;
@@ -169,9 +185,7 @@
   font-size: large;
   text-align: center;
 }
-
-/*-------------mapa-------------*/
-.map-responsive {
+.ubicacionMain .map-responsive {
   margin: 5px 10px 25px 10px;
   width: 80%;
   overflow: hidden;
@@ -179,7 +193,7 @@
   position: relative;
   height: 0;
 }
-.map-responsive iframe {
+.ubicacionMain .map-responsive iframe {
   left: 0;
   top: 0;
   height: 100%;
@@ -202,84 +216,87 @@
   transition: all 0.2s;
 }
 .contactMain .form:hover {
-  box-shadow: 0px 5px 16px 3px rgba(142, 112, 112, 0.75);
-  -webkit-box-shadow: 0px 5px 16px 3px rgba(142, 112, 112, 0.75);
-  -moz-box-shadow: 0px 5px 16px 3px rgba(142, 112, 112, 0.75);
+  box-shadow: 0px 5px 16px 3px rgba(249, 196, 196, 0.75);
+  -webkit-box-shadow: 0px 5px 16px 3px rgba(249, 196, 196, 0.75);
+  -moz-box-shadow: 0px 5px 16px 3px rgba(249, 196, 196, 0.75);
   transform: translateY(-1px);
 }
-.contactMain .fieldset {
+.contactMain .form .fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contactMain .fieldset legend {
+.contactMain .form .fieldset legend {
   padding: 5px;
   text-align: center;
 }
-.contactMain .fieldset .nombre-apellido {
+.contactMain .form .fieldset .nombre-apellido {
   padding: 8px;
 }
-.contactMain .fieldset .nombre-apellido input {
+.contactMain .form .fieldset .nombre-apellido input {
   outline: none;
   border-radius: 5px;
   border: 0;
   background-color: white;
   padding: 5px;
 }
-.contactMain .fieldset .email-telefono {
+.contactMain .form .fieldset .email-telefono {
   padding: 8px;
 }
-.contactMain .fieldset .email-telefono input {
+.contactMain .form .fieldset .email-telefono input {
   outline: none;
   border-radius: 5px;
   border: 0;
   background-color: white;
   padding: 5px;
 }
-.contactMain .fieldset .dropdown {
+.contactMain .form .fieldset .dropdown {
   outline: none;
   padding: 8px;
   width: 100%;
   border-radius: 5px;
   border: 0;
 }
-.contactMain .fieldset .mensaje textarea {
+.contactMain .form .fieldset .mensaje textarea {
   outline: none;
   width: 100%;
   padding: 8px;
   border: 0;
   border-radius: 5px;
 }
-.contactMain .fieldset .checkbox {
+.contactMain .form .fieldset .checkbox {
   margin-top: 10px;
   padding: 5px 15px;
   border-radius: 5px;
   background-color: rgb(249, 157, 182);
 }
-.contactMain .botonesForm {
+.contactMain .form .botonesForm {
   margin-top: 5px;
   padding: 10px;
   display: flex;
   flex-direction: row-reverse;
 }
-.contactMain .botonesForm .btnForm {
+.contactMain .form .botonesForm .btnForm {
   width: 80px;
   margin: 5px;
   padding: 5px;
 }
-.contactMain .botonesForm .submit {
+.contactMain .form .botonesForm .submit {
   background-color: rgb(238, 98, 138);
   border: none;
   border-radius: 5px;
   color: white;
   font-weight: 600;
 }
-.contactMain .botonesForm .reset {
+.contactMain .form .botonesForm .reset {
   background-color: #FFCDD4;
   border: 0;
   border-radius: 5px;
   color: rgb(238, 98, 138);
   font-weight: 600;
+}
+.contactMain .form .botonesForm .reset:hover {
+  background-color: rgb(248, 186, 203);
 }
 
 /*--------------------footer-------------------*/
@@ -310,7 +327,7 @@
 .footer .footerContainer .footerNav ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .footer .footerContainer .footerNav ul li {
   list-style: none;
@@ -318,6 +335,7 @@
 }
 .footer .footerContainer .footerNav ul li a {
   text-decoration: none;
+  font-size: 20px;
   font-weight: 500;
   color: black;
 }
@@ -342,12 +360,12 @@
     flex-direction: column-reverse;
     flex-wrap: wrap;
   }
-  .quienSoyCont .quienSoyTxt {
+  .quienSoyTxt {
     width: 90%;
     margin: 5%;
     margin-top: 10px;
   }
-  .quienSoyCont .fotoPersonalCont {
+  .fotoPersonalCont {
     width: 90%;
     margin: 5%;
     margin-bottom: 0;
@@ -357,4 +375,4 @@
   .servicio {
     flex-direction: column;
   }
-}
+}/*# sourceMappingURL=style.css.map */

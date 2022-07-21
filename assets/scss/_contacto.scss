@@ -5,103 +5,101 @@
     align-items: center;
     .form{
         margin: 10px;
-        border-radius: 8px;
-        background-color: $rosaClaro;
+        border-radius: 8px; 
+        background-color: $rosaSuave;
         display: flex;
         flex-direction: column;
         transition: all 0.2s;
-            &:hover{
-                box-shadow: 0px 5px 16px 3px $sombraGris;
-                -webkit-box-shadow: 0px 5px 16px 3px $sombraGris;
-                -moz-box-shadow: 0px 5px 16px 3px $sombraGris;
-                transform: translateY(-1px);
+        &:hover{
+            box-shadow: 0px 5px 16px 3px $sombraClara;
+            -webkit-box-shadow: 0px 5px 16px 3px $sombraClara;
+            -moz-box-shadow: 0px 5px 16px 3px $sombraClara;
+            transform: translateY(-1px);
+        }
+        .fieldset{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            legend {
+                padding: 5px;
+                text-align: center;
             }
-        }
-    .fieldset{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        legend {
-            padding: 5px;
-            text-align: center;
-        }
-        .nombre-apellido{
-            padding: 8px;
-            input{
-                outline: map-get($formInput, outline);
-                border-radius: map-get($formInput, borderRadius);
-                border: map-get($formInput, color);
-                background-color: map-get($formInput, bckgColor);
-                padding: map-get($formInput, padding);
+            .nombre-apellido{
+                padding: 8px;
+                input{
+                    outline: map-get($inputs, outline );
+                    border-radius: map-get($inputs, b-radius );
+                    border: map-get($inputs, border );
+                    background-color: map-get($inputs, bckg-color );
+                    padding: map-get($inputs, padding );
+                }
             }
-        }
-        .email-telefono{
-            padding: 8px;
-            input{
-                outline: map-get($formInput, outline);
-                border-radius: map-get($formInput, borderRadius);
-                border: map-get($formInput, color);
-                background-color: map-get($formInput, bckgColor);
-                padding: map-get($formInput, padding);
+            .email-telefono{
+                padding: 8px;
+                input{
+                    outline: map-get($inputs, outline );
+                    border-radius: map-get($inputs, b-radius );
+                    border: map-get($inputs, border );
+                    background-color: map-get($inputs, bckg-color );
+                    padding: map-get($inputs, padding );
+                }
             }
-        }
-        .dropdown{
-            outline: none;
-            padding: 8px;
-            width: 100%;
-            border-radius: 5px;
-            border: 0;
-        }
-        .mensaje{
-            textarea{
+            .dropdown{
+                outline: none;
+                padding: 8px;
+                width: 100%;
+                border-radius: 5px;
+                border: 0;
+            }
+            .mensaje textarea{
                 outline: none;
                 width: 100%;
                 padding: 8px;
                 border: 0;
                 border-radius: 5px;
             }
+            .checkbox{
+                margin-top: 10px;
+                padding: 5px 15px;
+                border-radius: 5px;
+                background-color: rgb(249, 157, 182);
+            }
         }
-        .checkbox{
-            margin-top: 10px;
-            padding: 5px 15px;
-            border-radius: 5px;
-            background-color: rgb(249, 157, 182);
+        .botonesForm{
+            margin-top: 5px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row-reverse;
+            .btnForm{
+                width: 80px;
+                margin: 5px;
+                padding: 5px;
+            }
+            .submit{
+                background-color: $rosaFuerte;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: 600;
+            }
+            .reset{
+                background-color: $rosaSuave;
+                border: 0;
+                border-radius: 5px;
+                color: $rosaFuerte;
+                font-weight: 600;
+                &:hover{
+                    background-color: rgb(248, 186, 203);
+                }
+            }
         }
-    }
-    .botonesForm{
-        margin-top: 5px;
-        padding: 10px;
-        display: flex;
-        flex-direction: row-reverse;
-        .btnForm{
-            width: 80px;
-            margin: 5px;
-            padding: 5px;
-        }
-        .submit{
-            background-color: $rosaFucsia;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-weight: 600;
-        }
-        .reset{
-            background-color: $rosaClaro;
-            border: 0;
-            border-radius: 5px;
-            color: $rosaFucsia;
-            font-weight: 600;
-        }
+
     }
 }
+ 
 
-$formInput:(
-    borderRadius: 5px, 
-    outline: none,
-    border: 0,
-    bckgColor: white,
-    padding: 5px
-);
+
+
 
 
 
